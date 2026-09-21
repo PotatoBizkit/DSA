@@ -2,12 +2,20 @@
 
 void pnum(int num, int i){
     // // forward recursion O(N) O(N)
-    // if (num<=0)
+    // if (i>num)
+    // {
     //     return;
+    // }
     // printf("%d\n", i);
-    // pnum(num-1, i+1);
+    // pnum(num, i+1);
 
-    // backtracking
+    // backtracking O(N) O(N)
+    if (i>num)
+    {
+        return;
+    }
+    pnum(num, i+1);
+    printf("%d\n", num-i+1);
     
 }
 
