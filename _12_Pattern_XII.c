@@ -1,0 +1,33 @@
+#include<stdio.h>
+
+void p(int n){
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < 2*n; j++)
+        {
+            if (j<i+1)
+            {
+                printf("%d", j+1);
+            }
+            else if (j>(2*n)-i-2)
+            {
+                printf("%d", (2*n)-j);
+            }
+            
+            else{
+                printf(" ");
+            }            
+        }
+        printf("\n");
+    }
+}
+
+int main(){
+    int n;
+    printf("Enter an integer:\n");
+    scanf("%d", &n);
+
+    p(n);
+
+    return 0;
+}
